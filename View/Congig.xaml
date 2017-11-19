@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SmartController.Congig"
+             Title="SmartController">
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical"
+                     Margin="5,10,5,20">
+            <Label Text="House Number"
+                   FontSize="20"
+                   FontAttributes="Bold"/>
+            <Entry Placeholder="House Number"
+                    x:Name="HouseNumber"/>
+            <Label Text="Device Number"
+                   FontSize="20"
+                   FontAttributes="Bold"/>
+            <Entry Placeholder="House Number"
+                    x:Name="DiiceNumber"/>
+
+            <Image
+                x:Name="ImageDone"
+                Source="doneIcon"
+                HeightRequest="200"
+                WidthRequest="200"
+                IsVisible="False"/>
+
+
+            <Button x:Name="Save"
+                    Text="Save"
+                    WidthRequest="350"
+                    BackgroundColor="Green"
+                    TextColor="White"
+                    HorizontalOptions="CenterAndExpand"
+                    VerticalOptions="EndAndExpand"
+                    Clicked="Save_Clicked"/>
+            
+            
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

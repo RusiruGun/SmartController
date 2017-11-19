@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SmartController.HomePage"
+             Title="SmartController">
+    <ContentPage.Content>
+        
+        <StackLayout Orientation="Vertical" 
+                     Padding="0,0,5,10">
+            <Image Source="BlueBanndet"/>
+
+            <ListView x:Name="Device" CachingStrategy="RecycleElement"
+                      ItemSelected="Device_ItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+
+                        <ViewCell >
+                            <ViewCell.View>
+                                <Grid Margin="0,0,0,1">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="50"/>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="*" />
+                                    </Grid.ColumnDefinitions>
+
+
+
+                                    <StackLayout Orientation="Horizontal">
+                                        <Image Source="fileBLueIcon.png"/>
+
+                                        <StackLayout Orientation="Vertical">
+
+                                            <Label Text="{Binding Name}"
+                                           FontSize="22"
+                                           FontAttributes="Bold"
+                                            x:Name="NameLBL"/>
+
+                                            <Label Text="{Binding DeviceID}"/>
+                                        </StackLayout>
+
+                                    </StackLayout>
+                                </Grid>
+                            </ViewCell.View>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <Button Text="Scanning..."
+                BackgroundColor="Gray"
+                TextColor="White"
+                HorizontalOptions="CenterAndExpand"
+                WidthRequest="350"
+                x:Name="Connect"
+                    IsEnabled="False"
+                Clicked="Connect_Clicked"/>
+
+        </StackLayout>
+
+       
+    </ContentPage.Content>
+
+   
+
+
+
+</ContentPage>

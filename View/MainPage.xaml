@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:SmartController"
+             x:Class="SmartController.MainPage"
+             Title="SmartController">
+
+
+    <ContentPage.Content>
+
+        <StackLayout Padding="50">
+            <Label Text="Logo"
+                   FontSize="53"
+                   FontAttributes="Bold"
+                   HorizontalOptions="CenterAndExpand"
+                   Margin="30"
+                   
+                   TextColor="#64B5F6"/>
+            <Grid>
+            <Image Source="ic_bluetooth_searching_white_36dp"
+                   HorizontalOptions="CenterAndExpand"
+                   WidthRequest="150"
+                   HeightRequest="150"
+                   x:Name="Bluetooth"/>
+                <Grid.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                </Grid.GestureRecognizers>
+            </Grid>
+            <Label Text="Turn On"
+                   FontSize="25"
+                   FontAttributes="Bold"
+                   TextColor="#64B5F6"
+                   HorizontalOptions="CenterAndExpand"
+                   Margin="20"/>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
